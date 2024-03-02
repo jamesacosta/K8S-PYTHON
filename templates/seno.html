@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoines matematicas</title>
+</head>
+<body>
+    <h1>RESULTADOS DE FUNCIONES MATEMATICAS</h1>
+    <h2>Seno:</h2>
+    <p>El valor del sen es: {{ sin_res }}</p>
+    
+    <script>
+        // Esta función recarga la página después de 1 segundo
+        function recargarPagina() {
+            setTimeout(function() {
+                location.reload();
+            }, 1000); // 1000 milisegundos = 1 segundo
+        }
+
+        // Llamar a la función cuando se carga el documento
+        document.addEventListener("DOMContentLoaded", function() {
+            recargarPagina();
+        });
+    </script>
+
+</body>
+</html>

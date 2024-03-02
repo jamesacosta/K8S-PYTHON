@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoines matematicas</title>
+</head>
+<body>
+
+    <h1>RESULTADOS DE FUNCIONES MATEMATICAS</h1>
+    <h2>Coseno:</h2>
+    <p>El valor del cos es: {{ cos_res }}</p>
+    
+    <script>
+        //recargamos la pagina para no tener que refrescarla
+        function recargarPagina() {
+            setTimeout(function() {
+                location.reload();
+            }, 1000); // 1000 milisegundos para recargarla cada 1 s
+        }
+
+        //llamamos a la funcion cada que se recarga el codigo
+        document.addEventListener("DOMContentLoaded", function() {
+            recargarPagina();
+        });
+    </script>
+
+</body>
+</html>

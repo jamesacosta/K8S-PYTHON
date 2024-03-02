@@ -87,3 +87,9 @@ async def generate_random(request: Request):
     return templates.TemplateResponse(
         "random.html", {"request": request, "random_number": random_number}
     )
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="localhost", port=8000)

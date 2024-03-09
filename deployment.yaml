@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+      - name: fastapi-app-container
+        image: fasapi  # Asegúrate de reemplazar con el nombre y etiqueta de imagen correctos
+        imagePullPolicy: Never  # Usa 'Never' solo si usas imágenes locales, 'Always' en producción
+        ports:
+        - containerPort: 5050   # El puerto en el que tu aplicación FastAPI es accesible dentro del contenedor

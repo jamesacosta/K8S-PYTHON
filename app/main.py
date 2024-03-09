@@ -11,7 +11,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 
 app = FastAPI()
-templates = Jinja2Templates(directory="../templates")
+templates = Jinja2Templates(directory="templates")
 
 
 class NameItem(BaseModel):

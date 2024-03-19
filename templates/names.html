@@ -11,8 +11,8 @@
     <p>¡El nombre "{{ new_name }}" ha sido creado con éxito!</p>
     {% endif %}
     <ul>
-        {% for indexed_name in indexed_names %}
-            <li>{{ indexed_name[0] }}. {{ indexed_name[1] }}</li>  <!-- Cambia aquí para mostrar el índice -->
+        {% for index, name in indexed_names %}
+            <li>{{ index }}. {{ name }}</li>
         {% endfor %}
     </ul>
      <script>

@@ -51,9 +51,7 @@ Asegúrate de reemplazar las versiones con las que desees usar.
 
 Si ya tienes un archivo requirements.txt, puedes instalar todas las dependencias listadas en él con el siguiente comando:
 
-````bash
-pip install -r requirements.txt
 ```bash
+pip install -r requirements.txt
 
-
-````
+```

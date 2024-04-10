@@ -1,4 +1,4 @@
-Para iniciar un proyecto de Python utilizando FastAPI desde la creación de un entorno virtual (venv) hasta la instalación de los requisitos (requirements.txt), puedes seguir los siguientes pasos en la terminal de tu sistema operativo. Asumiré que ya tienes Python instalado en tu sistema.
+<!-- Para iniciar un proyecto de Python utilizando FastAPI desde la creación de un entorno virtual (venv) hasta la instalación de los requisitos (requirements.txt), puedes seguir los siguientes pasos en la terminal de tu sistema operativo. Asumiré que ya tienes Python instalado en tu sistema.
 
 
 1. Crear un entorno virtual:
@@ -29,4 +29,21 @@ Para iniciar un proyecto de Python utilizando FastAPI desde la creación de un e
 		pip install -r requirements.txt
 		python -m venv venv
 		.\venv\Scripts\activate
-		pip install -r requirements.txt
+		pip install -r requirements.txt -->
+
+# Iniciar un Proyecto de FastAPI
+
+Para iniciar un proyecto de Python utilizando FastAPI desde la creación de un entorno virtual (venv) hasta la instalación de los requisitos (`requirements.txt`), puedes seguir los siguientes pasos en la terminal de tu sistema operativo. Este tutorial asume que ya tienes Python instalado en tu sistema.
+
+## Pasos
+
+### 1. Crear un entorno virtual
+
+Primero, navega hasta la carpeta donde quieres crear tu proyecto y luego ejecuta:
+
+```bash
+python -m venv venv
+
+Primero, navega hasta la carpeta donde quieres crear tu proyecto y luego ejecuta:
+
+```

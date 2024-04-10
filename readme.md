@@ -39,11 +39,24 @@ Para iniciar un proyecto de Python utilizando FastAPI desde la creación de un e
 
 ### 1. Crear un entorno virtual
 
-Primero, navega hasta la carpeta donde quieres crear tu proyecto y luego ejecuta:
+#### 1.1 Primero, navega hasta la carpeta donde quieres crear tu proyecto y luego ejecuta:
 
 ```bash
 python -m venv venv
+```
 
-Primero, navega hasta la carpeta donde quieres crear tu proyecto y luego ejecuta:
+Esto creará un entorno virtual en una carpeta llamada venv.
 
+#### 1.2 Luego, activa el entorno virtual. La forma de hacerlo varía según el sistema operativo:
+
+##### En windows:
+
+```Powershell
+		.\venv\Scripts\activate
+```
+
+##### En MacOs y Linux:
+
+```Powershell
+		source venv/bin/activate
 ```

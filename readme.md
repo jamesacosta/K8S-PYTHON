@@ -55,3 +55,64 @@ Si ya tienes un archivo requirements.txt, puedes instalar todas las dependencias
 pip install -r requirements.txt
 
 ```
+
+### 1.6 Crear el archivo deployment.yaml
+Para crear un archivo llamado deployment.yaml dentro de una carpeta llamada kubernetes, ejecuta los siguientes comandos en la terminal:
+
+```
+mkdir kubernetes
+cd kubernetes
+nano deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fasapi-deployment
+  labels:
+    app: fasapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fasapi
+  template:
+    metadata:
+      labels:
+        app: fasapi
+    spec:
+      containers:
+      - name: fasapi
+        image: jamesacosta/fasapi:04
+        ports:
+        - containerPort: 5050
+```
+### 1.7 Instalar Minikube y Iniciar el Cluster
+Para instalar la última versión estable de Minikube en Linux x86-64 utilizando la descarga binaria, ejecuta los siguientes comandos en la terminal:
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+```
+
+### 1.8 Para iniciar el cluster, ejecuta el siguiente comando:
+```
+minikube start
+```
+
+### 2.0 Crear un Alias para kubectl
+Puedes crear un alias para kubectl que apunte a la versión de kubectl de Minikube con el siguiente comando:
+
+```
+alias kubectl="minikube kubectl --"
+```
+### 2.1 Desplegar la Aplicación en Minikube
+Para desplegar la aplicación en Minikube, asegúrate de estar en la carpeta donde se encuentra el archivo deployment.yaml, luego ejecuta el siguiente comando:
+
+```
+kubectl apply -f deployment.yaml
+```
+
+### 2.2 Con estos comandos podremos comprobar que todo se ejecuto correctamente y tenemos exito en la aplicacion, podremos usar un portforward para acceder a la aplicacion
+
+```
+kubectl port-forward pod/name-pod 5050:5050
+```

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fasapi-deployment
+  labels:
+    app: fasapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fasapi
+  template:
+    metadata:
+      labels:
+        app: fasapi
+    spec:
+      containers:
+      - name: fasapi
+        image: jamesacosta/fasapi:04
+        ports:
+        - containerPort: 5050

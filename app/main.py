@@ -12,7 +12,7 @@ from pymongo.server_api import ServerApi
 
 # Configuration of the MongoDB connection
 MONGODB_URI = (
-    "mongodb+srv://jamesacosta:Elmundoesgrande123_"
+    "mongodb+srv://name:password"
     "@fasapi.xxvlvla.mongodb.net/?retryWrites=true&w="
     "majority&appName=fasapi"
 )
